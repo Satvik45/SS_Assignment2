@@ -1,0 +1,250 @@
+/* Base Styles */
+body {
+    font-family: 'Monospace', sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center align items vertically */
+    gap: 20px; /* Space between flex items */
+}
+
+.section {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+label {
+    font-weight: bold;
+    margin-bottom: 8px; /* Space below labels */
+    display: block; /* Make labels block-level */
+}
+
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px; /* Slightly more margin below form elements */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Smooth transition for better feedback */
+}
+
+input[type="file"]:hover,
+select:hover,
+input[type="file"]:focus,
+select:focus {
+    border-color: #888; /* Darker border on hover/focus for better feedback */
+}
+
+/* Buttons Styling */
+
+
+
+.shift-button {
+    display: flex;             /* Use flexbox */
+    align-items: center;       /* Align items vertically in the center */
+    justify-content: center;   /* Align items horizontally in the center */
+    gap: 100px;                 /* Space between the buttons */
+    padding: 5px 10px;
+    /* background-color: #0c0b3a; */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.shift-button {
+    margin: 20px 10px;  /* Adjust margins for spacing */
+    padding: 5px 15px;
+    background-color: #07054f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;             /* Use flexbox */
+    flex-direction: row;       /* Arrange items horizontally */
+    align-items: center;       /* Align items vertically in the center */
+    gap: 5px;                 /* Spacing between arrow buttons */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;       /* Align items vertically in the center */
+}
+
+.shift-button:hover {
+    background-color: #adef14;
+    /* margin: 10px 0;
+    padding: 5px 10px; */
+}
+
+/* Styling for Next and Cancel buttons */
+.button1-container {
+    display: block;
+    margin-top: 5px;
+}
+
+.button2-container {
+    display: block;
+    margin-top: 1px;
+}
+
+
+
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    justify-content: center;  /* This centers the items horizontally */
+    align-items: center;      /* This centers the items vertically */
+}
+
+.next-button {
+    background-color: #2ecc71; /* Changed color to green */
+    color: #ffffff; /* White text for better contrast */
+    border-radius: 25px; /* Rounded edges */
+    padding: 10px 20px; /* Adjusted padding for a better appearance */
+    margin-top: 5px;
+    text-align: center;
+    display: block;
+    margin-left: auto; /* Aligning in center */
+    margin-right: auto; /* Aligning in center */
+}
+
+.cancel-button {
+    background-color: #e74c3c; /* Changed color to red */
+    color: #ffffff; /* White text for better contrast */
+    border-radius: 25px; /* Rounded edges */
+    padding: 10px 20px; /* Adjusted padding for a better appearance */
+    display: block;
+    margin-left: auto; /* Aligning in center */
+    margin-right: auto; /* Aligning in center */
+}
+
+.button:hover {
+    filter: brightness(1.1); /* Slightly brighten on hover */
+    justify-content: center;  /* This centers the items horizontally */
+    align-items: center;      /* This centers the items vertically */
+}
+
+/* Messages and Feedback */
+.error-message,
+.next-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #ff0000;
+}
+
+.next-message {
+    color: #525CEB;
+}
+
+/* Table Styles */
+.result-table {
+    width: 100%;
+    border-collapse: separate; /* Separate border model for distinct cell borders */
+    border-spacing: 0; /* Remove any spacing between table cells */
+    margin-top: 20px;
+    font-size: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-table th,
+.result-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border: 1px solid #ddd; /* A distinct border around each cell */
+}
+
+.result-table th {
+    background-color: #3498db;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.result-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.result-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.result-table td:last-child,
+.result-table th:last-child {
+    border-right: 1px solid #ddd; /* Right border for the last cell in each row */
+}
+
+.result-table td:first-child,
+.result-table th:first-child {
+    border-left: 1px solid #ddd; /* Left border for the first cell in each row */
+}
+
+/* Scrollable Table for smaller screens */
+@media (max-width: 768px) {
+    .result-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .result-table thead,
+    .result-table tbody,
+    .result-table th,
+    .result-table td,
+    .result-table tr {
+        display: block;
+    }
+
+    .result-table tr {
+        margin-bottom: 15px;
+    }
+
+    .result-table td,
+    .result-table th {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .result-table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .result-table td:nth-of-type(1):before { content: "Header 1"; }
+    .result-table td:nth-of-type(2):before { content: "Header 2"; }
+    /* ... Add labels for each header as needed ... */
+}
