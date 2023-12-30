@@ -1,6 +1,7 @@
 # Smartserv-task-2
 
 This repo is all about Smartserv Task-2
+
 The JSON file contains 1000 records of products. Each product has the following 4 attributes 
 Subcategory
 Title
